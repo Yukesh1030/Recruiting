@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard | Stackly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="dash-sidebar">
+            <a href="index.html" class="dash-brand">STACKLY</a>
+            
+            <nav class="dash-nav">
+                <ul class="dash-nav-list">
+                    <li><a href="#" class="dash-nav-link active"><i class="ri-dashboard-line"></i> Overview</a></li>
+                    <li><a href="404.html" class="dash-nav-link"><i class="ri-briefcase-line"></i> Applications</a></li>
+                    <li><a href="404.html" class="dash-nav-link"><i class="ri-heart-line"></i> Saved Jobs</a></li>
+                    <li><a href="404.html" class="dash-nav-link"><i class="ri-wallet-line"></i> Wallet</a></li>
+                    <li><a href="404.html" class="dash-nav-link"><i class="ri-settings-4-line"></i> Settings</a></li>
+                </ul>
+            </nav>
+
+            <a href="index.html" class="dash-nav-link dash-logout">
+                <i class="ri-logout-box-r-line"></i> Log Out
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <header class="dash-header">
+                <div class="dash-breadcrumb">
+                    <a href="index.html" class="back-link-inline" style="color: #64748b; font-size: 0.9rem; margin-right: 2rem;">
+                        <i class="ri-arrow-left-line"></i> Back to Home
+                    </a>
+                </div>
+                <div class="dash-welcome">
+                    Welcome, Candidate <i class="ri-user-smile-line"></i>
+                </div>
+            </header>
+
+            <section class="dash-content animate-on-scroll">
+                <div class="dash-stats-grid">
+                    <div class="dash-stat-card">
+                        <p class="stat-title">Applications Sent</p>
+                        <div class="stat-value">
+                            24 
+                            <span class="stat-trend trend-up"><i class="ri-arrow-right-up-line"></i> +12%</span>
+                        </div>
+                    </div>
+                    <div class="dash-stat-card">
+                        <p class="stat-title">Interviews Scheduled</p>
+                        <div class="stat-value">
+                            3
+                            <span class="stat-trend trend-up"><i class="ri-calendar-check-line"></i> Next: 2PM</span>
+                        </div>
+                    </div>
+                    <div class="dash-stat-card">
+                        <p class="stat-title">Profile Visibility</p>
+                        <div class="stat-value">
+                            458 
+                            <span class="stat-trend trend-up"><i class="ri-eye-line"></i> High</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Graph Mockup for Spending History/Activity -->
+                <div class="dash-chart-card">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Activity History</h3>
+                        <span style="color: #64748b; font-size: 0.9rem;">2026</span>
+                    </div>
+                    <div class="mock-graph">
+                        <!-- Simple CSS/SVG graph -->
+                        <svg class="mock-line" viewBox="0 0 400 100">
+                            <path d="M0,80 Q50,40 100,70 T200,30 T300,50 T400,20" stroke="#000" fill="none" stroke-width="4"></path>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
