@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs Portal | Stackly</title>
+    <meta name="description" content="Browse open roles and apply directly through Stackly's proprietary job board. Custom filtered precision for top-tier candidates.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="node_modules/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --job-accent: #a855f7; 
+            --bg-job-dark: #121212;
+            --bg-job-card: #1e1e1e;
+        }
+        body { background-color: var(--bg-job-dark); color: #f3f4f6; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">Stackly<span style="color: var(--primary-color);">.</span></a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="About.html" class="nav-link">About Us</a></li>
+                    <li><a href="Contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="Jobs.html" class="nav-link">Jobs</a></li>
+                    <li><a href="404.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jobs Main Wrapper -->
+    <main class="jobs-portal">
+        <!-- 1. Search Hero -->
+        <section class="jobs-hero">
+            <div class="container">
+                <div class="global-search-wrapper animate-on-scroll">
+                    <i class="ri-search-line search-icon"></i>
+                    <input type="text" id="globalSearch" class="global-search-input" placeholder="Find your next opportunity" autofocus>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Two-Column Layout -->
+        <section class="jobs-dashboard">
+            <div class="container jobs-grid">
+                
+                <!-- Sidebar Filters -->
+                <aside class="jobs-sidebar animate-on-scroll delay-1">
+                    <div class="filter-header-main">
+                        <h2 class="filter-title">Filters</h2>
+                        <button id="clearFilters" class="btn-clear-filters">Clear filters <i class="ri-refresh-line"></i></button>
+                    </div>
+
+                    <!-- Location Filter -->
+                    <div class="filter-group">
+                        <div class="filter-group-header accordion-trigger" data-target="locationContent">
+                            <h3>Location</h3>
+                            <i class="ri-subtract-line btn-collapse"></i>
+                        </div>
+                        <div id="locationContent" class="filter-group-content">
+                            <div class="local-search-wrapper">
+                                <i class="ri-search-line local-search-icon"></i>
+                                <input type="text" id="locationSearch" placeholder="Search locations" class="local-search-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Area of Interest -->
+                    <div class="filter-group">
+                        <div class="filter-group-header accordion-trigger" data-target="interestContent">
+                            <h3>Area of Interest</h3>
+                            <i class="ri-add-line btn-collapse rotated-icon"></i>
+                        </div>
+                        <div id="interestContent" class="filter-group-content collapsed-content">
+                           <p style="color: var(--text-muted); font-size: 0.8rem;">Select your domain of expertise.</p>
+                        </div>
+                    </div>
+
+                    <!-- Job Type -->
+                    <div class="filter-group">
+                        <div class="filter-group-header accordion-trigger" data-target="typeContent">
+                            <h3>Job Type</h3>
+                            <i class="ri-subtract-line btn-collapse"></i>
+                        </div>
+                        <div id="typeContent" class="filter-group-content">
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="type" value="Full-time">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">Full-time</span>
+                                <span class="checkbox-count">53413</span>
+                            </label>
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="type" value="Contract">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">Contract</span>
+                                <span class="checkbox-count">12840</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="filter-group">
+                        <div class="filter-group-header accordion-trigger" data-target="experienceContent">
+                            <h3>Experience</h3>
+                            <i class="ri-subtract-line btn-collapse"></i>
+                        </div>
+                        <div id="experienceContent" class="filter-group-content">
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="experience" value="0-2">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">0-2 years</span>
+                                <span class="checkbox-count">6531</span>
+                            </label>
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="experience" value="2-5">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">2-5 years</span>
+                                <span class="checkbox-count">19093</span>
+                            </label>
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="experience" value="5-10">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">5-10 years</span>
+                                <span class="checkbox-count">23850</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Job Feed -->
+                <div class="jobs-feed animate-on-scroll delay-2" id="jobsFeed">
+                    <div class="feed-header">
+                        <span class="results-count"><span id="jobCount">10</span> Results</span>
+                        <div class="feed-sort" id="sortTrigger" style="position: relative;">
+                            <span id="sortText">Sort by Newest</span>
+                            <i class="ri-arrow-down-s-line sort-icon"></i>
+                            <div class="sort-dropdown" id="sortDropdown">
+                                <div class="sort-option active" data-sort="newest">Newest</div>
+                                <div class="sort-option" data-sort="oldest">Oldest</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 1 -->
+                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-28">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Application Support Engineer</h3>
+                                <p class="job-meta">Coimbatore | Full time | Experience: 2-5 years</p>
+                                <p class="job-skill">Required Skill: Databricks Unified Data Analytics Platform</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 2 -->
+                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-29">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Application Support Engineer</h3>
+                                <p class="job-meta">Coimbatore | Full time | Experience: 2-5 years</p>
+                                <p class="job-skill">Required Skill: Large Language Models (LLMs)</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 3 -->
+                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-30">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Application Support Engineer</h3>
+                                <p class="job-meta">Coimbatore | Full time | Experience: 2-5 years</p>
+                                <p class="job-skill">Required Skill: PySpark</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 4 -->
+                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-27">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Analytics Practitioner</h3>
+                                <p class="job-meta">Coimbatore | Full time | Experience: 2-5 years</p>
+                                <p class="job-skill">Required Skill: Advanced Python Scripting</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 5 -->
+                    <div class="job-card" data-type="Contract" data-experience="5-10" data-location="Bangalore" data-date="2026-03-25">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Senior Cloud Architect</h3>
+                                <p class="job-meta">Bangalore | Contract | Experience: 5-10 years</p>
+                                <p class="job-skill">Required Skill: AWS, Terraform, Kubernetes</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 6 -->
+                    <div class="job-card" data-type="Full-time" data-experience="0-2" data-location="Pune" data-date="2026-03-26">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Junior Frontend Developer</h3>
+                                <p class="job-meta">Pune | Full time | Experience: 0-2 years</p>
+                                <p class="job-skill">Required Skill: React, TypeScript, CSS Animations</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 7 -->
+                    <div class="job-card" data-type="Full-time" data-experience="5-10" data-location="Hyderabad" data-date="2026-03-24">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">AI Research Scientist</h3>
+                                <p class="job-meta">Hyderabad | Full time | Experience: 5-10 years</p>
+                                <p class="job-skill">Required Skill: PyTorch, NLP, Computer Vision</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 8 -->
+                    <div class="job-card" data-type="Contract" data-experience="2-5" data-location="Chennai" data-date="2026-03-23">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Cybersecurity Analyst</h3>
+                                <p class="job-meta">Chennai | Contract | Experience: 2-5 years</p>
+                                <p class="job-skill">Required Skill: SIEM, Phishing Simulations, Network Security</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 9 -->
+                    <div class="job-card" data-type="Full-time" data-experience="5-10" data-location="San Francisco" data-date="2026-03-22">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">VP of Engineering</h3>
+                                <p class="job-meta">San Francisco | Full time | Experience: 10+ years</p>
+                                <p class="job-skill">Required Skill: Strategic Leadership, Team Scaling, M&A</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+
+                    <!-- Job Card 10 -->
+                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="London" data-date="2026-03-21">
+                        <a href="404.html" class="job-card-link">
+                            <div class="job-card-content">
+                                <h3 class="job-title">Product Marketing Manager</h3>
+                                <p class="job-meta">London | Full time | Experience: 2-5 years</p>
+                                <p class="job-skill">Required Skill: User Research, GTM Strategy, Analytics</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="btn-job-add"><i class="ri-add-line"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Stackly<span style="color: var(--primary-color);">.</span></h2>
+                    <p>Connecting visionary talent with the companies building tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="Jobs.html">Jobs</a></li>   
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Business Services</h4>
+                    <ul>
+                        <li><a href="404.html">Contingency Search</a></li>
+                        <li><a href="404.html">Retained Search</a></li>
+                        <li><a href="404.html">Temp & Contract</a></li>
+                        <li><a href="404.html">Volume Hiring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="404.html">Branch Locations</a></li>
+                        <li><a href="404.html">Departments</a></li>
+                        <li><a href="404.html">Employee Referral</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="404.html">LinkedIn</a></li>
+                        <li><a href="404.html">Twitter</a></li>
+                        <li><a href="404.html">Instagram</a></li>
+                        <li><a href="404.html">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Stackly. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="jobs.js"></script>
+</body>
+</html>
