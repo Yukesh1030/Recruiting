@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings | STACKLY Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <div class="dash-overlay" id="dashOverlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="dash-sidebar">
+            <a href="index.html" class="dash-brand"><span class="logo-brand">STACKLY</span> <span style="color: #4F46E5;">PRO</span></a>
+            
+            <nav class="dash-nav">
+                <ul class="dash-nav-list">
+                    <li><a href="HR-Dashboard.html" class="dash-nav-link"><i class="ri-pie-chart-2-line"></i> Analytics</a></li>
+                    <li><a href="TalentPool.html" class="dash-nav-link"><i class="ri-user-search-line"></i> Talent Pool</a></li>
+                    <li><a href="JobListings.html" class="dash-nav-link active"><i class="ri-book-open-line"></i> Job Listings</a></li>
+                    <li><a href="Payouts.html" class="dash-nav-link"><i class="ri-hand-coin-line"></i> Payouts</a></li>
+                </ul>
+            </nav>
+
+            <a href="Login.html" class="dash-nav-link dash-logout">
+                <i class="ri-logout-box-r-line"></i> Log Out
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <header class="dash-header">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="ri-menu-2-line"></i>
+                </button>
+                <div class="dash-breadcrumb">
+                    <a href="index.html" class="back-link-inline" style="color: var(--text-muted); font-size: 0.9rem; margin-right: 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="ri-arrow-left-line"></i> Back to Home
+                    </a>
+                    <h2 style="font-weight: 800; font-size: 1.5rem;">Job <span class="highlight">Listings</span></h2>
+                </div>
+                <a href="404.html" class="dash-welcome">
+                    <i class="ri-briefcase-add-line"></i> Post New Job
+                </a>
+            </header>
+
+            <section class="dash-content animate-on-scroll">
+                <div class="job-mgmt-grid">
+                    <!-- Job Card 1 -->
+                    <div class="job-mgmt-card">
+                        <span class="card-status status-hired">Active</span>
+                        <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff;">Senior Software Engineer</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">Engineering • Remote • $120k - $160k</p>
+                        
+                        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h5 style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Applicants</h5>
+                                <p style="font-size: 1.5rem; font-weight: 800; color: #fff;">48</p>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Interviews</h5>
+                                <p style="font-size: 1.5rem; font-weight: 800; color: #fff;">12</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-primary" style="flex: 1; padding: 0.6rem; font-size: 0.8rem;">Edit Listing</a>
+                            <a href="404.html" class="btn btn-outline" style="padding: 0.6rem;"><i class="ri-more-2-line"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="job-mgmt-card">
+                        <span class="card-status status-interview" style="background: rgba(255,255,255,0.05); color: var(--text-muted); border-color: var(--glass-border);">Draft</span>
+                        <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff;">UX/UI Designer</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">Design • New York • $90k - $130k</p>
+                        
+                        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h5 style="font-size: 0.65rem; text-transform: uppercase; color: #94a3b8; font-weight: 800; margin-bottom: 0.5rem;">Applicants</h5>
+                                <p style="font-size: 1.25rem; font-weight: 700;">0</p>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 0.65rem; text-transform: uppercase; color: #94a3b8; font-weight: 800; margin-bottom: 0.5rem;">Status</h5>
+                                <p style="font-size: 0.9rem; font-weight: 700; color: #64748b; margin-top: 0.35rem;">Review Pending</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-primary" style="flex: 1; padding: 0.6rem; font-size: 0.8rem;">Publish Now</a>
+                            <a href="404.html" class="btn btn-outline" style="padding: 0.6rem;"><i class="ri-delete-bin-line"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 3 -->
+                    <div class="job-mgmt-card">
+                        <span class="card-status status-rejected">Closed</span>
+                        <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff;">Product Manager</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">Management • Remote • $135k - $175k</p>
+                        
+                        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h5 style="font-size: 0.65rem; text-transform: uppercase; color: #94a3b8; font-weight: 800; margin-bottom: 0.5rem;">Hire</h5>
+                                <p style="font-size: 1rem; font-weight: 700; color: #10B981; margin-top: 0.3rem;">Alex Johnson</p>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Duration</h5>
+                                <p style="font-size: 1.5rem; font-weight: 800; color: #fff;">14 days</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-outline" style="flex: 1; padding: 0.6rem; font-size: 0.8rem;">History</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.querySelector('.dash-sidebar');
+        const overlay = document.getElementById('dashOverlay');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        }
+        if (overlay) {
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

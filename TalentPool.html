@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Pool | STACKLY Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <div class="dash-overlay" id="dashOverlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="dash-sidebar">
+            <a href="index.html" class="dash-brand"><span class="logo-brand">STACKLY</span> <span style="color: #4F46E5;">PRO</span></a>
+            
+            <nav class="dash-nav">
+                <ul class="dash-nav-list">
+                    <li><a href="HR-Dashboard.html" class="dash-nav-link"><i class="ri-pie-chart-2-line"></i> Analytics</a></li>
+                    <li><a href="TalentPool.html" class="dash-nav-link active"><i class="ri-user-search-line"></i> Talent Pool</a></li>
+                    <li><a href="JobListings.html" class="dash-nav-link"><i class="ri-book-open-line"></i> Job Listings</a></li>
+                    <li><a href="Payouts.html" class="dash-nav-link"><i class="ri-hand-coin-line"></i> Payouts</a></li>
+                </ul>
+            </nav>
+
+            <a href="Login.html" class="dash-nav-link dash-logout">
+                <i class="ri-logout-box-r-line"></i> Log Out
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <header class="dash-header">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="ri-menu-2-line"></i>
+                </button>
+                <div class="dash-breadcrumb">
+                    <a href="index.html" class="back-link-inline" style="color: var(--text-muted); font-size: 0.9rem; margin-right: 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="ri-arrow-left-line"></i> Back to Home
+                    </a>
+                    <h2 style="font-weight: 800; font-size: 1.5rem;">Talent <span class="highlight">Pool</span></h2>
+                </div>
+                <div class="dash-welcome">
+                    <i class="ri-user-search-line"></i> 1,240 Candidates
+                </div>
+            </header>
+
+            <section class="dash-content animate-on-scroll">
+                <div class="search-bar-modern" style="margin-bottom: 2rem;">
+                    <div class="input-with-icon" style="position: relative; max-width: 500px;">
+                        <i class="ri-search-line" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                        <input id="candidateSearchInput" type="text" placeholder="Search candidates by name or skill..." style="width: 100%; padding: 1.25rem 1.25rem 1.25rem 3.5rem; border: 1px solid var(--glass-border); border-radius: 16px; outline: none; background: var(--bg-card); color: var(--text-main); font-family: var(--font-sans); transition: var(--transition);">
+                    </div>
+                </div>
+
+                <div class="candidate-grid">
+                    <!-- Candidate 1 -->
+                    <div class="candidate-card">
+                        <span class="card-status status-interview">Interviewing</span>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 54px; height: 54px; background: linear-gradient(135deg, var(--primary-color), #8B5CF6); color: #fff; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);">JD</div>
+                            <div>
+                                <h4 style="font-weight: 700; color: #fff;">John Doe</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Frontend Developer</p>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Expert in React, TypeScript and Framer Motion. 5+ years experience.</p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-primary" style="flex: 1; padding: 0.6rem; font-size: 0.8rem;">View Profile</a>
+                            <a href="404.html" class="btn btn-outline" style="padding: 0.6rem;"><i class="ri-mail-line"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Candidate 2 -->
+                    <div class="candidate-card">
+                        <span class="card-status status-hired">Hired</span>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 54px; height: 54px; background: linear-gradient(135deg, var(--secondary-color), #059669); color: #fff; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);">SS</div>
+                            <div>
+                                <h4 style="font-weight: 700; color: #fff;">Sarah Smith</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">UI Designer</p>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Specialized in Design Systems and Accessibility. Previously at Google.</p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-primary" style="flex: 1; padding: 0.6rem; font-size: 0.8rem;">View Profile</a>
+                            <a href="404.html" class="btn btn-outline" style="padding: 0.6rem;"><i class="ri-mail-line"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Candidate 3 -->
+                    <div class="candidate-card">
+                        <span class="card-status status-rejected">Rejected</span>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 54px; height: 54px; background: linear-gradient(135deg, #64748B, #475569); color: #fff; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">MK</div>
+                            <div>
+                                <h4 style="font-weight: 700; color: #fff;">Mike King</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Backend Engineer</p>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Java/Spring enthusiast with a focus on microservices and scalability.</p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-primary" style="flex: 1; padding: 0.6rem; font-size: 0.8rem;">View Profile</a>
+                            <a href="404.html" class="btn btn-outline" style="padding: 0.6rem;"><i class="ri-mail-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.querySelector('.dash-sidebar');
+        const overlay = document.getElementById('dashOverlay');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        }
+        if (overlay) {
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

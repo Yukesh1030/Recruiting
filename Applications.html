@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications | STACKLY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <div class="dash-overlay" id="dashOverlay"></div>
+        <!-- Sidebar -->
+        <aside class="dash-sidebar">
+            <a href="index.html" class="dash-brand"><span class="logo-brand">STACKLY</span></a>
+            
+            <nav class="dash-nav">
+                <ul class="dash-nav-list">
+                    <li><a href="Jobs-Dashboard.html" class="dash-nav-link"><i class="ri-dashboard-line"></i> Overview</a></li>
+                    <li><a href="Applications.html" class="dash-nav-link active"><i class="ri-briefcase-line"></i> Applications</a></li>
+                    <li><a href="SavedJobs.html" class="dash-nav-link"><i class="ri-heart-line"></i> Saved Jobs</a></li>
+                    <li><a href="Wallet.html" class="dash-nav-link"><i class="ri-wallet-line"></i> Wallet</a></li>
+                </ul>
+            </nav>
+
+            <a href="Login.html" class="dash-nav-link dash-logout">
+                <i class="ri-logout-box-r-line"></i> Log Out
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <header class="dash-header">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="ri-menu-2-line"></i>
+                </button>
+                <div class="dash-breadcrumb">
+                    <a href="index.html" class="back-link-inline" style="color: var(--text-muted); font-size: 0.9rem; margin-right: 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="ri-arrow-left-line"></i> Back to Home
+                    </a>
+                    <h2 style="font-weight: 800; font-size: 1.5rem;">My <span class="highlight">Applications</span></h2>
+                </div>
+                <div class="dash-welcome">
+                    Welcome, Candidate <i class="ri-user-smile-line"></i>
+                </div>
+            </header>
+
+            <section class="dash-content animate-on-scroll">
+                <div class="job-mgmt-grid">
+                    <!-- Application 1 -->
+                    <div class="job-mgmt-card">
+                        <span class="card-status status-interview">Interviewing</span>
+                        <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff;">Frontend Developer</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">TechCorp Inc. • Remote</p>
+                        
+                        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h5 style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Applied On</h5>
+                                <p style="font-size: 1.2rem; font-weight: 800; color: #fff;">Mar 28, 2026</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-primary" style="flex: 1; padding: 0.6rem; font-size: 0.8rem; text-align: center;">View Status</a>
+                            <a href="404.html" class="btn btn-outline" style="padding: 0.6rem; text-align: center;"><i class="ri-close-line"></i> Withdraw</a>
+                        </div>
+                    </div>
+
+                    <!-- Application 2 -->
+                    <div class="job-mgmt-card">
+                        <span class="card-status status-hired" style="background: rgba(255,255,255,0.05); color: var(--text-muted); border-color: var(--glass-border);">In Review</span>
+                        <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff;">UX/UI Designer</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">DesignStudio • New York</p>
+                        
+                        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h5 style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Applied On</h5>
+                                <p style="font-size: 1.2rem; font-weight: 800; color: #fff;">Mar 25, 2026</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-primary" style="flex: 1; padding: 0.6rem; font-size: 0.8rem; text-align: center;">View Status</a>
+                            <a href="404.html" class="btn btn-outline" style="padding: 0.6rem; text-align: center;"><i class="ri-close-line"></i> Withdraw</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Application 3 -->
+                    <div class="job-mgmt-card">
+                        <span class="card-status status-rejected">Rejected</span>
+                        <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff;">React Engineer</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">GlobalSoft • San Francisco</p>
+                        
+                        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h5 style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Applied On</h5>
+                                <p style="font-size: 1.2rem; font-weight: 800; color: #fff;">Mar 10, 2026</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="404.html" class="btn btn-outline" style="flex: 1; padding: 0.6rem; font-size: 0.8rem; text-align: center;">Archive</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.querySelector('.dash-sidebar');
+        const overlay = document.getElementById('dashOverlay');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        }
+        if (overlay) {
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

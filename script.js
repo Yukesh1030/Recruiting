@@ -67,4 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.boxShadow = 'none';
         }
     });
+    // Candidate Search Filter (TalentPool.html)
+    const candidateSearchInput = document.getElementById('candidateSearchInput');
+    if (candidateSearchInput) {
+        candidateSearchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const candidateCards = document.querySelectorAll('.candidate-card');
+            
+            candidateCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
 });

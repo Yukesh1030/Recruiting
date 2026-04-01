@@ -11,21 +11,21 @@
 <body class="dashboard-page">
 
     <div class="dashboard-wrapper">
+        <div class="dash-overlay" id="dashOverlay"></div>
         <!-- Sidebar -->
         <aside class="dash-sidebar">
             <a href="index.html" class="dash-brand"><span class="logo-brand">STACKLY</span> <span style="color: #4F46E5;">PRO</span></a>
             
             <nav class="dash-nav">
                 <ul class="dash-nav-list">
-                    <li><a href="#" class="dash-nav-link active"><i class="ri-pie-chart-2-line"></i> Analytics</a></li>
-                    <li><a href="404.html" class="dash-nav-link"><i class="ri-user-search-line"></i> Talent Pool</a></li>
-                    <li><a href="404.html" class="dash-nav-link"><i class="ri-book-open-line"></i> Job Listings</a></li>
-                    <li><a href="404.html" class="dash-nav-link"><i class="ri-hand-coin-line"></i> Payouts</a></li>
-                    <li><a href="404.html" class="dash-nav-link"><i class="ri-customer-service-2-line"></i> Support</a></li>
+                    <li><a href="HR-Dashboard.html" class="dash-nav-link active"><i class="ri-pie-chart-2-line"></i> Analytics</a></li>
+                    <li><a href="TalentPool.html" class="dash-nav-link"><i class="ri-user-search-line"></i> Talent Pool</a></li>
+                    <li><a href="JobListings.html" class="dash-nav-link"><i class="ri-book-open-line"></i> Job Listings</a></li>
+                    <li><a href="Payouts.html" class="dash-nav-link"><i class="ri-hand-coin-line"></i> Payouts</a></li>
                 </ul>
             </nav>
 
-            <a href="index.html" class="dash-nav-link dash-logout">
+            <a href="Login.html" class="dash-nav-link dash-logout">
                 <i class="ri-logout-box-r-line"></i> Log Out
             </a>
         </aside>
@@ -33,12 +33,15 @@
         <!-- Main Content -->
         <main class="dash-main">
             <header class="dash-header">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="ri-menu-2-line"></i>
+                </button>
                 <div class="dash-breadcrumb">
-                    <a href="index.html" class="back-link-inline" style="color: #64748b; font-size: 0.9rem; margin-right: 2rem;">
+                    <a href="index.html" class="back-link-inline" style="color: var(--text-muted); font-size: 0.9rem; margin-right: 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
                         <i class="ri-arrow-left-line"></i> Back to Home
                     </a>
                 </div>
-                <div class="dash-welcome" style="background: #e2e8f0; color: #000;">
+                <div class="dash-welcome">
                     Welcome, HR Manager <i class="ri-briefcase-4-line"></i>
                 </div>
             </header>
@@ -81,9 +84,31 @@
                         <span style="color: #64748b; font-size: 0.9rem;">Last 30 Days</span>
                     </div>
                     <div class="mock-graph">
-                        <svg class="mock-line" viewBox="0 0 400 100">
-                            <path d="M0,90 Q100,20 200,80 T400,10" stroke="#4F46E5" fill="none" stroke-width="5"></path>
+                        <svg class="mock-line" viewBox="0 0 400 150" preserveAspectRatio="none" style="overflow: visible;">
+                            <defs>
+                                <linearGradient id="area-gradient" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="var(--primary-color)" stop-opacity="0.3" />
+                                    <stop offset="100%" stop-color="var(--primary-color)" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Area fill -->
+                            <path d="M0,130 C 80,130 120,60 200,90 C 280,120 320,40 400,50 L400,150 L0,150 Z" fill="url(#area-gradient)"></path>
+                            <!-- Main line -->
+                            <path d="M0,130 C 80,130 120,60 200,90 C 280,120 320,40 400,50" stroke="var(--primary-color)" fill="none" stroke-width="4"></path>
+                            <!-- Data Points -->
+                            <circle cx="200" cy="90" r="5" fill="var(--primary-color)"></circle>
+                            <circle cx="400" cy="50" r="5" fill="var(--primary-color)"></circle>
+                            <!-- Tooltip Markers -->
+                            <text x="180" y="75" fill="var(--text-main)" font-size="10" font-weight="700">$12,400</text>
+                            <text x="345" y="35" fill="var(--text-main)" font-size="10" font-weight="700">$24,500</text>
                         </svg>
+                        <!-- Grid Labels -->
+                        <div style="display: flex; justify-content: space-between; margin-top: 1rem; color: var(--text-muted); font-size: 0.75rem; font-weight: 600;">
+                            <span>Week 1</span>
+                            <span>Week 2</span>
+                            <span>Week 3</span>
+                            <span>Week 4</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -92,5 +117,25 @@
 
     <script src="script.js"></script>
     <script src="auth.js"></script>
+    <script>
+        // Simple Sidebar Toggle Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.querySelector('.dash-sidebar');
+        const overlay = document.getElementById('dashOverlay');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payouts | STACKLY Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <div class="dash-overlay" id="dashOverlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="dash-sidebar">
+            <a href="index.html" class="dash-brand"><span class="logo-brand">STACKLY</span> <span style="color: #4F46E5;">PRO</span></a>
+            
+            <nav class="dash-nav">
+                <ul class="dash-nav-list">
+                    <li><a href="HR-Dashboard.html" class="dash-nav-link"><i class="ri-pie-chart-2-line"></i> Analytics</a></li>
+                    <li><a href="TalentPool.html" class="dash-nav-link"><i class="ri-user-search-line"></i> Talent Pool</a></li>
+                    <li><a href="JobListings.html" class="dash-nav-link"><i class="ri-book-open-line"></i> Job Listings</a></li>
+                    <li><a href="Payouts.html" class="dash-nav-link active"><i class="ri-hand-coin-line"></i> Payouts</a></li>
+                </ul>
+            </nav>
+
+            <a href="Login.html" class="dash-nav-link dash-logout">
+                <i class="ri-logout-box-r-line"></i> Log Out
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <header class="dash-header">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="ri-menu-2-line"></i>
+                </button>
+                <div class="dash-breadcrumb">
+                    <a href="index.html" class="back-link-inline" style="color: var(--text-muted); font-size: 0.9rem; margin-right: 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="ri-arrow-left-line"></i> Back to Home
+                    </a>
+                    <h2 style="font-weight: 800; font-size: 1.5rem;">Financial <span class="highlight">Payouts</span></h2>
+                </div>
+                <a href="404.html" class="dash-welcome">
+                    <i class="ri-external-link-line"></i> Export CSV
+                </a>
+            </header>
+
+            <section class="dash-content animate-on-scroll">
+                <!-- Summary Section -->
+                <div class="dash-stats-grid">
+                    <div class="dash-stat-card">
+                        <p class="stat-title">Total Commissions Paid</p>
+                        <div class="stat-value">
+                            $42,850 
+                            <span class="stat-trend trend-up"><i class="ri-arrow-right-up-line"></i> +12%</span>
+                        </div>
+                    </div>
+                    <div class="dash-stat-card">
+                        <p class="stat-title">Unpaid Balance</p>
+                        <div class="stat-value">
+                            $3,200
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="font-weight: 800; margin: 3rem 0 1.5rem; font-size: 1.25rem;">Transaction <span class="highlight">History</span></h3>
+                
+                <div class="payout-list">
+                    <!-- Payout Item 1 -->
+                    <div class="payout-item">
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.1); color: var(--secondary-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(16, 185, 129, 0.2);">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <div class="payout-info">
+                                <h4 style="font-weight: 700; color: #fff; margin-bottom: 0.25rem;">Commission: alex Johnson Placement</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Transaction ID: #PX-99210 • Mar 28, 2026</p>
+                            </div>
+                        </div>
+                        <div class="payout-amount">+$1,450.00</div>
+                    </div>
+
+                    <!-- Payout Item 2 -->
+                    <div class="payout-item">
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.1); color: var(--secondary-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(16, 185, 129, 0.2);">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <div class="payout-info">
+                                <h4 style="font-weight: 700; color: #fff; margin-bottom: 0.25rem;">Platform Usage Fee Rebate</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Transaction ID: #PX-98205 • Mar 22, 2026</p>
+                            </div>
+                        </div>
+                        <div class="payout-amount">+$240.00</div>
+                    </div>
+
+                    <!-- Payout Item 3 -->
+                    <div class="payout-item">
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.1); color: var(--secondary-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(16, 185, 129, 0.2);">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <div class="payout-info">
+                                <h4 style="font-weight: 700; color: #fff; margin-bottom: 0.25rem;">Commission: Sarah Smith Placement</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Transaction ID: #PX-97011 • Mar 14, 2026</p>
+                            </div>
+                        </div>
+                        <div class="payout-amount">+$2,100.00</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.querySelector('.dash-sidebar');
+        const overlay = document.getElementById('dashOverlay');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        }
+        if (overlay) {
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

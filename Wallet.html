@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Seeker Dashboard | STACKLY</title>
+    <title>My Wallet | STACKLY</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -18,10 +18,10 @@
             
             <nav class="dash-nav">
                 <ul class="dash-nav-list">
-                    <li><a href="Jobs-Dashboard.html" class="dash-nav-link active"><i class="ri-dashboard-line"></i> Overview</a></li>
+                    <li><a href="Jobs-Dashboard.html" class="dash-nav-link"><i class="ri-dashboard-line"></i> Overview</a></li>
                     <li><a href="Applications.html" class="dash-nav-link"><i class="ri-briefcase-line"></i> Applications</a></li>
                     <li><a href="SavedJobs.html" class="dash-nav-link"><i class="ri-heart-line"></i> Saved Jobs</a></li>
-                    <li><a href="Wallet.html" class="dash-nav-link"><i class="ri-wallet-line"></i> Wallet</a></li>
+                    <li><a href="Wallet.html" class="dash-nav-link active"><i class="ri-wallet-line"></i> Wallet</a></li>
                 </ul>
             </nav>
 
@@ -40,6 +40,7 @@
                     <a href="index.html" class="back-link-inline" style="color: var(--text-muted); font-size: 0.9rem; margin-right: 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
                         <i class="ri-arrow-left-line"></i> Back to Home
                     </a>
+                    <h2 style="font-weight: 800; font-size: 1.5rem;">My <span class="highlight">Wallet</span></h2>
                 </div>
                 <div class="dash-welcome">
                     Welcome, Candidate <i class="ri-user-smile-line"></i>
@@ -49,39 +50,43 @@
             <section class="dash-content animate-on-scroll">
                 <div class="dash-stats-grid">
                     <div class="dash-stat-card">
-                        <p class="stat-title">Applications Sent</p>
+                        <p class="stat-title">Available Balance</p>
                         <div class="stat-value">
-                            24 
-                            <span class="stat-trend trend-up"><i class="ri-arrow-right-up-line"></i> +12%</span>
+                            $1,250.00
                         </div>
-                    </div>
-                    <div class="dash-stat-card">
-                        <p class="stat-title">Interviews Scheduled</p>
-                        <div class="stat-value">
-                            3
-                            <span class="stat-trend trend-up"><i class="ri-calendar-check-line"></i> Next: 2PM</span>
-                        </div>
-                    </div>
-                    <div class="dash-stat-card">
-                        <p class="stat-title">Profile Visibility</p>
-                        <div class="stat-value">
-                            458 
-                            <span class="stat-trend trend-up"><i class="ri-eye-line"></i> High</span>
+                        <div style="margin-top: 2rem;">
+                            <a href="404.html" class="btn btn-primary" style="width: 100%; text-align: center; display: block; padding: 1rem;">Withdraw Funds</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Simple Graph Mockup for Spending History/Activity -->
-                <div class="dash-chart-card">
-                    <div class="chart-header">
-                        <h3 class="chart-title">Activity History</h3>
-                        <span style="color: #64748b; font-size: 0.9rem;">2026</span>
+                
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem; margin-top: 3rem; color: #fff;">Transaction History</h3>
+                
+                <div class="payout-list">
+                    <div class="payout-item">
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="width: 44px; height: 44px; background: rgba(16, 185, 129, 0.1); color: var(--secondary-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(16, 185, 129, 0.2);">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <div class="payout-info">
+                                <h4 style="font-weight: 700; color: #fff; margin-bottom: 0.25rem;">Interview Bonus</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">From TechCorp Inc. • Mar 28, 2026</p>
+                            </div>
+                        </div>
+                        <div class="payout-amount">+$250.00</div>
                     </div>
-                    <div class="mock-graph">
-                        <!-- Simple CSS/SVG graph -->
-                        <svg class="mock-line" viewBox="0 0 400 100">
-                            <path d="M0,80 Q50,40 100,70 T200,30 T300,50 T400,20" stroke="var(--primary-color)" fill="none" stroke-width="4"></path>
-                        </svg>
+
+                    <div class="payout-item">
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="width: 44px; height: 44px; background: rgba(79, 70, 229, 0.1); color: var(--primary-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(79, 70, 229, 0.2);">
+                                <i class="ri-calendar-check-line"></i>
+                            </div>
+                            <div class="payout-info">
+                                <h4 style="font-weight: 700; color: #fff; margin-bottom: 0.25rem;">Profile Completion Reward</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Platform Bounty • Mar 15, 2026</p>
+                            </div>
+                        </div>
+                        <div class="payout-amount">+$1,000.00</div>
                     </div>
                 </div>
             </section>
