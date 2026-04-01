@@ -332,25 +332,89 @@ h1, h2, h3, h4 {
     position: absolute;
     bottom: -20px;
     left: -20px;
-    padding: 1.5rem;
-    border-radius: 16px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    padding: 1.25rem 1.5rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2);
     animation: float 6s ease-in-out infinite;
     animation-delay: 1s;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.overlay-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stat-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+    position: relative;
+}
+
+.stat-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulse-glow-green 2s infinite;
+}
+
+@keyframes pulse-glow-green {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.stat-icon-wrapper i {
+    font-size: 1.75rem;
+    color: white;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .stat {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 800;
-    color: var(--secondary-color);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    background: linear-gradient(to right, #ffffff, #a7f3d0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
 }
 
 .stat-label {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 @keyframes float {
