@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const activeFilters = {
             type: [],
-            experience: []
+            experience: [],
+            interest: []
         };
         
         checkboxes.forEach(cb => {
@@ -78,14 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const skill = card.querySelector('.job-skill').textContent.toLowerCase();
             const type = card.dataset.type;
             const experience = card.dataset.experience;
+            const interest = card.dataset.interest;
             const location = card.dataset.location.toLowerCase();
 
             const matchesSearch = title.includes(searchTerm) || meta.includes(searchTerm) || skill.includes(searchTerm);
             const matchesLocation = location.includes(locationTerm);
             const matchesType = activeFilters.type.length === 0 || activeFilters.type.includes(type);
             const matchesExperience = activeFilters.experience.length === 0 || activeFilters.experience.includes(experience);
+            const matchesInterest = activeFilters.interest.length === 0 || activeFilters.interest.includes(interest);
 
-            if (matchesSearch && matchesLocation && matchesType && matchesExperience) {
+            if (matchesSearch && matchesLocation && matchesType && matchesExperience && matchesInterest) {
                 card.style.display = 'flex';
                 visibleCount++;
             } else {

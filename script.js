@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.15 // trigger when 15% of the element is visible
+            threshold: 0.10 // Adjusted for better mobile trigger
         };
 
         const animationObserver = new IntersectionObserver((entries, observer) => {

@@ -47,7 +47,7 @@
         <!-- 1. Search Hero -->
         <section class="jobs-hero">
             <div class="container">
-                <div class="global-search-wrapper animate-on-scroll">
+                <div class="global-search-wrapper animate-on-scroll scale-in">
                     <i class="ri-search-line search-icon"></i>
                     <input type="text" id="globalSearch" class="global-search-input" placeholder="Find your next opportunity" autofocus>
                 </div>
@@ -59,7 +59,7 @@
             <div class="container jobs-grid">
                 
                 <!-- Sidebar Filters -->
-                <aside class="jobs-sidebar animate-on-scroll delay-1">
+                <aside class="jobs-sidebar animate-on-scroll fade-right delay-1">
                     <div class="filter-header-main">
                         <h2 class="filter-title">Filters</h2>
                         <button id="clearFilters" class="btn-clear-filters">Clear filters <i class="ri-refresh-line"></i></button>
@@ -85,8 +85,22 @@
                             <h3>Area of Interest</h3>
                             <i class="ri-add-line btn-collapse rotated-icon"></i>
                         </div>
-                        <div id="interestContent" class="filter-group-content collapsed-content">
-                           <p style="color: var(--text-muted); font-size: 0.8rem;">Select your domain of expertise.</p>
+                        <div id="interestContent" class="filter-group-content">
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="interest" value="Engineering">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">Engineering</span>
+                            </label>
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="interest" value="Data & AI">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">Data & AI</span>
+                            </label>
+                            <label class="custom-checkbox-label">
+                                <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="interest" value="Product & Management">
+                                <span class="custom-checkbox-box"></span>
+                                <span class="checkbox-text">Product & Management</span>
+                            </label>
                         </div>
                     </div>
 
@@ -101,13 +115,11 @@
                                 <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="type" value="Full-time">
                                 <span class="custom-checkbox-box"></span>
                                 <span class="checkbox-text">Full-time</span>
-                                <span class="checkbox-count">53413</span>
                             </label>
                             <label class="custom-checkbox-label">
                                 <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="type" value="Contract">
                                 <span class="custom-checkbox-box"></span>
                                 <span class="checkbox-text">Contract</span>
-                                <span class="checkbox-count">12840</span>
                             </label>
                         </div>
                     </div>
@@ -123,26 +135,23 @@
                                 <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="experience" value="0-2">
                                 <span class="custom-checkbox-box"></span>
                                 <span class="checkbox-text">0-2 years</span>
-                                <span class="checkbox-count">6531</span>
                             </label>
                             <label class="custom-checkbox-label">
                                 <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="experience" value="2-5">
                                 <span class="custom-checkbox-box"></span>
                                 <span class="checkbox-text">2-5 years</span>
-                                <span class="checkbox-count">19093</span>
                             </label>
                             <label class="custom-checkbox-label">
                                 <input type="checkbox" class="custom-checkbox filter-checkbox" data-filter="experience" value="5-10">
                                 <span class="custom-checkbox-box"></span>
                                 <span class="checkbox-text">5-10 years</span>
-                                <span class="checkbox-count">23850</span>
                             </label>
                         </div>
                     </div>
                 </aside>
 
                 <!-- Job Feed -->
-                <div class="jobs-feed animate-on-scroll delay-2" id="jobsFeed">
+                <div class="jobs-feed animate-on-scroll fade-left delay-2" id="jobsFeed">
                     <div class="feed-header">
                         <span class="results-count"><span id="jobCount">10</span> Results</span>
                         <div class="feed-sort" id="sortTrigger" style="position: relative;">
@@ -156,7 +165,7 @@
                     </div>
 
                     <!-- Job Card 1 -->
-                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-28">
+                    <div class="job-card animate-on-scroll fade-up delay-1" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-28" data-interest="Engineering">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Application Support Engineer</h3>
@@ -168,7 +177,7 @@
                     </div>
 
                     <!-- Job Card 2 -->
-                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-29">
+                    <div class="job-card animate-on-scroll fade-up delay-2" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-29" data-interest="Engineering">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Application Support Engineer</h3>
@@ -180,7 +189,7 @@
                     </div>
 
                     <!-- Job Card 3 -->
-                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-30">
+                    <div class="job-card animate-on-scroll fade-up delay-3" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-30" data-interest="Engineering">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Application Support Engineer</h3>
@@ -192,7 +201,7 @@
                     </div>
 
                     <!-- Job Card 4 -->
-                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-27">
+                    <div class="job-card animate-on-scroll fade-up delay-4" data-type="Full-time" data-experience="2-5" data-location="Coimbatore" data-date="2026-03-27" data-interest="Data & AI">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Analytics Practitioner</h3>
@@ -204,7 +213,7 @@
                     </div>
 
                     <!-- Job Card 5 -->
-                    <div class="job-card" data-type="Contract" data-experience="5-10" data-location="Bangalore" data-date="2026-03-25">
+                    <div class="job-card animate-on-scroll fade-up delay-1" data-type="Contract" data-experience="5-10" data-location="Bangalore" data-date="2026-03-25" data-interest="Engineering">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Senior Cloud Architect</h3>
@@ -216,7 +225,7 @@
                     </div>
 
                     <!-- Job Card 6 -->
-                    <div class="job-card" data-type="Full-time" data-experience="0-2" data-location="Pune" data-date="2026-03-26">
+                    <div class="job-card animate-on-scroll fade-up delay-2" data-type="Full-time" data-experience="0-2" data-location="Pune" data-date="2026-03-26" data-interest="Engineering">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Junior Frontend Developer</h3>
@@ -228,7 +237,7 @@
                     </div>
 
                     <!-- Job Card 7 -->
-                    <div class="job-card" data-type="Full-time" data-experience="5-10" data-location="Hyderabad" data-date="2026-03-24">
+                    <div class="job-card animate-on-scroll fade-up delay-3" data-type="Full-time" data-experience="5-10" data-location="Hyderabad" data-date="2026-03-24" data-interest="Data & AI">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">AI Research Scientist</h3>
@@ -240,7 +249,7 @@
                     </div>
 
                     <!-- Job Card 8 -->
-                    <div class="job-card" data-type="Contract" data-experience="2-5" data-location="Chennai" data-date="2026-03-23">
+                    <div class="job-card" data-type="Contract" data-experience="2-5" data-location="Chennai" data-date="2026-03-23" data-interest="Engineering">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Cybersecurity Analyst</h3>
@@ -252,7 +261,7 @@
                     </div>
 
                     <!-- Job Card 9 -->
-                    <div class="job-card" data-type="Full-time" data-experience="5-10" data-location="San Francisco" data-date="2026-03-22">
+                    <div class="job-card" data-type="Full-time" data-experience="5-10" data-location="San Francisco" data-date="2026-03-22" data-interest="Engineering">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">VP of Engineering</h3>
@@ -264,7 +273,7 @@
                     </div>
 
                     <!-- Job Card 10 -->
-                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="London" data-date="2026-03-21">
+                    <div class="job-card" data-type="Full-time" data-experience="2-5" data-location="London" data-date="2026-03-21" data-interest="Product & Management">
                         <a href="404.html" class="job-card-link">
                             <div class="job-card-content">
                                 <h3 class="job-title">Product Marketing Manager</h3>
