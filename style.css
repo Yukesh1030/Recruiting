@@ -1986,10 +1986,12 @@ h1, h2, h3, h4 {
         max-width: 200px;
         margin: 1rem auto 0;
         display: block;
+        padding: 0.75rem 2rem !important;
+        border-radius: 9999px;
     }
     
     /* Hero Adjustments */
-    .hero { padding-top: 120px; text-align: center; min-height: auto; padding-bottom: 4rem; }
+    .hero, .about-hero, .contact-hero { padding-top: 120px; text-align: center; min-height: auto; padding-bottom: 4rem; }
     .hero-container { gap: 2rem; }
     .hero-title { font-size: 2.5rem; }
     .hero-buttons { flex-direction: column; align-items: stretch; }
@@ -2009,7 +2011,7 @@ h1, h2, h3, h4 {
     .process-timeline::after { display: none; }
     
     /* About Page Specific Adjustments */
-    .about-hero, .about-story, .about-values, .about-footprint, .about-diversity, .about-timeline, .about-culture, .about-cta {
+    .about-story, .about-values, .about-footprint, .about-diversity, .about-timeline, .about-culture, .about-cta {
         padding: 4rem 0;
     }
     .timeline-container { padding-left: 1.5rem; }
@@ -2018,7 +2020,7 @@ h1, h2, h3, h4 {
     .cta-banner { padding: 2.5rem 1.5rem; }
     
     /* Contact & Jobs Specific Adjustments */
-    .contact-hero, .contact-cards-section, .contact-form-section, .contact-map-section, .department-directory, .contact-faq, .testimonial-strip {
+    .contact-cards-section, .contact-form-section, .contact-map-section, .department-directory, .contact-faq, .testimonial-strip {
         padding: 4rem 0;
     }
     .form-wrapper { padding: 2.5rem 1.5rem; }
