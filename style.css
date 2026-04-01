@@ -2044,5 +2044,14 @@ h1, h2, h3, h4 {
     .stat-num { font-size: 2rem; }
     .newsletter-form { flex-direction: column; }
     .nl-submit { width: 100%; }
+    
+    /* Candidate Status Badge Overlap Fix */
+    .card-status { position: static; display: inline-block; margin-bottom: 1rem; }
+}
+
+/* Global Form Input Bound Fixes */
+input, select, textarea, .auth-input { 
+    box-sizing: border-box !important; 
+    max-width: 100% !important; 
 }
 
