@@ -1944,7 +1944,12 @@ h1, h2, h3, h4 {
 @media screen and (max-width: 768px) {
     .dash-header { flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 2rem; gap: 1rem; }
     .dash-welcome { font-size: 0.85rem; padding: 0.5rem 1.25rem; }
-    .dash-breadcrumb { display: none; }
+    .dash-breadcrumb { 
+        display: flex; 
+        align-items: center; 
+    }
+    .dash-breadcrumb h2 { display: none; }
+    .back-link-inline { margin-right: 1rem !important; font-size: 0.8rem !important; }
     .stat-value { font-size: 2rem; }
 }
 
