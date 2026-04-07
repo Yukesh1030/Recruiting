@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
+    // Close menu when a link is clicked
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -24,6 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Statistics Counter Animation
+    const startCounter = (el) => {
+        const target = parseInt(el.getAttribute('data-target'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const duration = 2000; // 2 seconds
+        let startTime = null;
+
+        const animate = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const value = Math.floor(progress * target);
+            el.textContent = value + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                el.textContent = target + suffix;
+            }
+        };
+        requestAnimationFrame(animate);
+    };
 
     // Scroll Animation Array Observer
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -40,6 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
+                    
+                    // Trigger counters if this element contains them
+                    const countersInEntry = entry.target.querySelectorAll('.counter');
+                    countersInEntry.forEach(counter => startCounter(counter));
+                    
                     // Stop observing once animated
                     observer.unobserve(entry.target);
                 }
